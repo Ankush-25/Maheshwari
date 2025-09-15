@@ -165,7 +165,7 @@ const Home = () => {
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
               <a
-                href="tel:+919358100587"
+                href="tel:+919897225756"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-amber-700 bg-white hover:bg-amber-50"
               >
                 📞 Call Now
