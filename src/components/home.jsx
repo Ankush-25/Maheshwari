@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Bestsellers from './Bestsellers';
 
 const Home = () => {
   return (
@@ -90,6 +91,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Bestsellers/>
 
       {/* Offerings Section */}
       <div className="py-16 bg-amber-50">
