@@ -125,7 +125,8 @@ const Bestsellers = ({ id }) => {
                 <div className="mt-4 flex justify-between items-center">
                   <span className="text-xl font-bold text-amber-700">₹{sweet.price}/kg</span>
                   <a
-                    href="tel:+919897225756"
+                    href="https://www.zomato.com/dehradun/maheshwari-sweet-shop-karanpur"
+                    target="_blank"
                     className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-amber-700 bg-white hover:bg-amber-50"
                   >
                     Order Now
