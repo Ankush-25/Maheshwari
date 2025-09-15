@@ -49,7 +49,7 @@ const Catering = () => {
       id: 2,
       name: 'Weddings',
       description: 'Make your special day even more memorable with our exquisite wedding catering services, customized to your preferences.',
-      image: 'https://images.unsplash.com/photo-1527631746610-b329ffc30b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2024/5/419704740/PH/BG/SZ/56917177/wedding-catering-services-500x500.jpeg',
       details: {
         capacity: '100-1000 people',
         popularOptions: ['Traditional Thali', 'Live Counters', 'Premium Dessert Station'],
@@ -60,7 +60,7 @@ const Catering = () => {
       id: 3,
       name: 'Private Parties',
       description: 'From birthday celebrations to anniversaries, we provide delicious food that will make your event unforgettable.',
-      image: 'https://images.unsplash.com/photo-1519671482749-5b87f9ddb2a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://the-garden.in/wp-content/uploads/2024/07/2-13.webp',
       details: {
         capacity: '20-200 people',
         popularOptions: ['Theme-based Menus', 'Finger Foods', 'Custom Cakes & Desserts'],
