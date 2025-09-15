@@ -17,7 +17,7 @@ const Navbar = () => {
                         <img 
                             src="./Maheshwari.png" 
                             alt="Logo Maheshwari"  
-                            className="h-36 -mt-6 cursor-pointer" 
+                            className={`h-36 h-[-3] cursor-pointer`} 
                             onClick={() => window.location.href = '/'}
                         />
                     </div>
