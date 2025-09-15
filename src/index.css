@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+
+body {
+  background-color: #f9f5ed;  /* soft cream tone */
+  color: #3a2d2d;            /* dark text for readability */
+  font-family: 'Poppins', 'Merriweather', sans-serif;
+}
