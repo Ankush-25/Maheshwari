@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Bestsellers from './Bestsellers';
+import Catering from './catering';
 
 const Home = () => {
   const handleScroll = (e) => {
@@ -115,8 +116,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Bestsellers id='bestsellers' />
-
+      
       {/* Offerings Section */}
       <div className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,6 +157,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Bestsellers id='bestsellers' />
 
       {/* Why Choose Us Section */}
       <div className="py-16 bg-white">
