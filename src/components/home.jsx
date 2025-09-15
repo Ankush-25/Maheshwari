@@ -3,6 +3,29 @@ import { Link } from 'react-router-dom';
 import Bestsellers from './Bestsellers';
 
 const Home = () => {
+  const handleScroll = (e) => {
+    // Prevent default if this is triggered by a link click
+    if (e) {
+      e.preventDefault();
+    }
+
+    const bestsellersElement = document.getElementById('bestsellers');
+    if (bestsellersElement) {
+      // Get the current scroll position
+      const currentPosition = window.pageYOffset;
+      // Get the target position
+      const targetPosition = bestsellersElement.offsetTop - 100; // 100px offset from top
+
+      // Only scroll if we're not already at the target
+      if (Math.abs(currentPosition - targetPosition) > 5) {
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -16,20 +39,21 @@ const Home = () => {
               Traditional recipes, timeless taste — trusted for over 80 years in Dehradun.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link 
-                to="/menu" 
+              <Link
+                to="#bestsellers"
+                onClick={handleScroll}
                 className="px-8 py-3 bg-amber-600 text-white font-medium rounded-md hover:bg-amber-700 transition-colors"
               >
                 View Menu
               </Link>
-              <Link 
-                to="/order" 
+              <Link
+                to="/order"
                 className="px-8 py-3 border-2 border-amber-600 text-amber-700 font-medium rounded-md hover:bg-amber-50 transition-colors"
               >
                 Order Now
               </Link>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-3 text-amber-700 font-medium hover:text-amber-800 transition-colors"
               >
                 Contact Us
@@ -51,9 +75,9 @@ const Home = () => {
 
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img 
-                src="./shop-interior.jpg" 
-                alt="Maheshwari Sweet Shop Interior" 
+              <img
+                src="./shop-interior.jpg"
+                alt="Maheshwari Sweet Shop Interior"
                 className="rounded-lg shadow-xl"
               />
             </div>
@@ -91,7 +115,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Bestsellers/>
+      <Bestsellers id='bestsellers' />
 
       {/* Offerings Section */}
       <div className="py-16 bg-amber-50">
@@ -99,7 +123,7 @@ const Home = () => {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-12">Our Offerings</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -140,7 +164,7 @@ const Home = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Why Choose Us</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: '🏛️', text: 'Established legacy since 1940' },

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaStar, FaFilter, FaSearch } from 'react-icons/fa';
 
-const Bestsellers = () => {
+const Bestsellers = ({id}) => {
   // Sample data for bestsellers
   const sweets =[
     {
@@ -64,7 +64,7 @@ const Bestsellers = () => {
   ];
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 bg-amber-50">
+    <div id={id} className="py-12 px-4 sm:px-6 lg:px-8 bg-amber-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-amber-900 mb-12">Our Bestsellers</h2>
         

@@ -55,9 +55,75 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="mt-12 lg:grid lg:grid-cols-2 lg:gap-8">
+        <div className="mt-12 lg:grid lg:grid-cols-2 lg:gap-12">
+          {/* Contact Information */}
+          <div className="bg-amber-50 p-8 rounded-xl shadow-md mb-8 lg:mb-0">
+            <h3 className="text-2xl font-bold text-amber-900 mb-6">Get in Touch</h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 bg-amber-100 p-3 rounded-full">
+                  <svg className="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-gray-900">Email Us</h4>
+                  <a href="mailto:prashantmaheshwari2705@gmail.com" className="text-amber-700 hover:text-amber-900">
+                    prashantmaheshwari2705@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 bg-amber-100 p-3 rounded-full">
+                  <svg className="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-gray-900">Call Us</h4>
+                  <a href="tel:+919897225756" className="text-amber-700 hover:text-amber-900">
+                    +91 98972 25756
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 bg-amber-100 p-3 rounded-full">
+                  <svg className="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-gray-900">Visit Us</h4>
+                  <address className="not-italic text-gray-700">
+                    8, Chowk, Irigation Colony<br />
+                    Karanpur, Dehradun<br />
+                    Uttarakhand 248001
+                  </address>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h4 className="text-lg font-medium text-gray-900 mb-4">Business Hours</h4>
+              <div className="space-y-2 text-gray-700">
+                <p className="flex justify-between">
+                  <span>Monday - Saturday:</span>
+                  <span>8:30 AM - 9:30 PM</span>
+                </p>
+                <p className="flex justify-between">
+                  <span>Sunday:</span>
+                  <span>9:00 AM - 9:00 PM</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Contact Form */}
-          <div className="bg-white py-8 px-6 sm:p-10 lg:col-span-1 xl:p-12 rounded-lg shadow-lg">
+          <div className="bg-white py-8 px-6 sm:p-10 rounded-xl shadow-lg">
             <h3 className="text-lg font-medium text-gray-900">Send us a message</h3>
             <form onSubmit={handleSubmit} className="mt-6 space-y-6">
               <div>
@@ -147,68 +213,6 @@ const Contact = () => {
                 </div>
               )}
             </form>
-          </div>
-
-          {/* Contact Information */}
-          <div className="mt-12 lg:mt-0 lg:pl-8">
-            <div className="space-y-6">
-              <h3 className="text-lg font-medium text-gray-900">Contact Information</h3>
-              
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 text-gray-400">
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div className="ml-3 text-base text-gray-500">
-                  <p>contact@maheshwari.com</p>
-                  <p className="mt-1">support@maheshwari.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 text-gray-400">
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <div className="ml-3 text-base text-gray-500">
-                  <p>+1 (555) 123-4567</p>
-                  <p className="mt-1">Mon - Fri, 9am - 5pm</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 text-gray-400">
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div className="ml-3 text-base text-gray-500">
-                  <p>123 Business Street</p>
-                  <p>New York, NY 10001</p>
-                  <p>United States</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 border-t border-gray-200 pt-8">
-              <h3 className="text-lg font-medium text-gray-900">Follow us</h3>
-              <div className="flex space-x-6 mt-4">
-                {[
-                  { name: 'Facebook', href: '#', icon: 'facebook' },
-                  { name: 'Twitter', href: '#', icon: 'twitter' },
-                  { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-                  { name: 'Instagram', href: '#', icon: 'instagram' }
-                ].map((item) => (
-                  <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">{item.name}</span>
-                    <i className={`fab fa-${item.icon} text-2xl`}></i>
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

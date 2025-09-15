@@ -13,8 +13,13 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
       </Route>
+      <Route path="*" element={<NoMatch />} />
     </Routes>
   )
+}
+
+function NoMatch() {
+  return <h1>404 Page Not Found</h1>
 }
 
 export default App

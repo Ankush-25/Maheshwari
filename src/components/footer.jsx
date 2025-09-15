@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Maheshwari</h3>
             <p >
-              Building a better future through innovation and technology.
+            Traditional recipes, timeless taste — trusted for over 80 years in Dehradun.
             </p>
           </div>
 
@@ -29,9 +29,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-medium mb-4">Contact Us</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: info@maheshwari.com</li>
-              <li>Phone: +1 234 567 890</li>
-              <li>Address: 123 Business St, City</li>
+              <li>Email: prashantmaheshwari2705@gmail.com</li>
+              <li>Phone: +91 9897225756</li>
+              <li>Address: 8, Chowk, Irigation Colony, Karanpur, Dehradun, Uttarakhand 248001</li>
             </ul>
           </div>
 
