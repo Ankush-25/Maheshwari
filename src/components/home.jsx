@@ -129,28 +129,28 @@ const Home = () => {
                 icon: '🍬',
                 title: 'Sweets (Mithai)',
                 items: 'Laddus, Barfi, Rasgullas, Gulab Jamun, Kaju Katli, and seasonal specialties',
-                onclick: () => window.location.href = '/Menu'
+                onclick: '/Menu'
               },
               {
                 icon: '🌮',
                 title: 'Chaat & Street Food',
                 items: 'Golgappe, Dahi Puri, Aloo Tikki, Papdi Chaat, and more',
-                onclick: () => window.location.href = '/Menu'
+                onclick: '/Menu'
               },
               {
                 icon: '🎉',
                 title: 'Catering Services',
                 items: 'Customized menus for weddings, birthdays, and corporate events',
-                onclick: () => window.location.href = '/Catering'
+                onclick: '/Catering'
               }
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold text-amber-800 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.items}</p>
-               <button onClick={item.onclick} className="mt-4 px-6 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors">
+               <Link to={item.onclick} className="mt-4 px-6 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors">
                   View More
-                </button>
+                </Link>
               </div>
             ))}
           </div>
