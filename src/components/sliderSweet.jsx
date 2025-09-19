@@ -454,7 +454,7 @@ const SliderSweet = ({ items = sliderItems }) => {
       aria-label="Featured sweets carousel"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-amber-900 mb-4">Our Special Sweets</h2>
+        <h2 className="text-4xl font-bold text-center text-amber-900 mb-4"> Best Seller</h2>
         <p className="text-center text-amber-700 mb-10 max-w-2xl mx-auto">
           Discover our handcrafted traditional sweets made with love and the finest ingredients
         </p>

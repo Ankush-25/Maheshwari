@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Bestsellers from './Bestsellers';
 import Catering from './catering';
 import SliderSweet from './sliderSweet';
+import BestsellersMini from './BestsellersMini';
 
 const Home = () => {
 
@@ -37,58 +38,7 @@ const Home = () => {
         </div>
       </div>
             <SliderSweet/>
-      {/* About Section */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-8">Our Sweet Legacy</h2>
-            <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
-              Founded in 1940 by the late Subhash Singh Maheshwari, our sweet shop has been serving authentic sweets and snacks in Dehradun for over eight decades.
-            </p>
-          </div>
-
-          <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src="./shop-interior.jpg"
-                alt="Maheshwari Sweet Shop Interior"
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-            <div className="space-y-6">
-              <p className="text-lg text-gray-600">
-                From humble beginnings at Karanpur Chowk, we've grown into one of the city's most loved destinations for mithai, chaat, and catering services.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Traditional recipes passed down through generations</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Pure vegetarian and freshly prepared sweets</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Quality ingredients and consistent taste</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Catering services for weddings, events, and special occasions</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+    
       
       {/* Offerings Section */}
       <div className="py-16 bg-amber-50">
@@ -136,7 +86,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Bestsellers />
+      <BestsellersMini />
 
       {/* Why Choose Us Section */}
       <div className="py-16 bg-white">
@@ -157,6 +107,58 @@ const Home = () => {
                 <p className="text-gray-700">{item.text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+        {/* About Section */}
+        <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-8">Our Sweet Legacy</h2>
+            <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
+              Founded in 1940 by the late Subhash Singh Maheshwari, our sweet shop has been serving authentic sweets and snacks in Dehradun for over eight decades.
+            </p>
+          </div>
+
+          <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="./shop-interior.jpg"
+                alt="Maheshwari Sweet Shop Interior"
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+            <div className="space-y-6">
+              <p className="text-lg text-gray-600">
+                From humble beginnings at Karanpur Chowk, we've grown into one of the city's most loved destinations for mithai, chaat, and catering services.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Traditional recipes passed down through generations</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Pure vegetarian and freshly prepared sweets</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Quality ingredients and consistent taste</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Catering services for weddings, events, and special occasions</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
