@@ -5,32 +5,7 @@ import Catering from './catering';
 import SliderSweet from './sliderSweet';
 
 const Home = () => {
-  const handleScroll = (e) => {
-    // Prevent default if this is triggered by a link click
-    // if (e) {
-    //   e.preventDefault();
-    // }
 
-    // const bestsellersElement = document.getElementById('bestsellers');
-    // if (bestsellersElement) {
-    //   // Get the current scroll position
-    //   const currentPosition = window.pageYOffset;
-    //   // Get the target position
-    //   const targetPosition = bestsellersElement.offsetTop - 100; // 100px offset from top
-
-    //   // Only scroll if we're not already at the target
-    //   if (Math.abs(currentPosition - targetPosition) > 5) {
-    //     window.scrollTo({
-    //       top: targetPosition,
-    //       behavior: 'smooth'
-    //     });
-    //   }
-    // }
-    window.location.href = '/Menu';
-  };
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
 
   return (
     <div className="min-h-screen">
@@ -46,8 +21,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                to="#bestsellers"
-                onClick={handleScroll}
+                to="/Menu"
                 className="px-8 py-3 bg-white text-amber-700 font-medium rounded-md hover:bg-amber-50 transition-colors"
                 >
                 View Menu
