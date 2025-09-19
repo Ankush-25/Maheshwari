@@ -2,29 +2,34 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Bestsellers from './Bestsellers';
 import Catering from './catering';
+import SliderSweet from './sliderSweet';
 
 const Home = () => {
   const handleScroll = (e) => {
     // Prevent default if this is triggered by a link click
-    if (e) {
-      e.preventDefault();
-    }
+    // if (e) {
+    //   e.preventDefault();
+    // }
 
-    const bestsellersElement = document.getElementById('bestsellers');
-    if (bestsellersElement) {
-      // Get the current scroll position
-      const currentPosition = window.pageYOffset;
-      // Get the target position
-      const targetPosition = bestsellersElement.offsetTop - 100; // 100px offset from top
+    // const bestsellersElement = document.getElementById('bestsellers');
+    // if (bestsellersElement) {
+    //   // Get the current scroll position
+    //   const currentPosition = window.pageYOffset;
+    //   // Get the target position
+    //   const targetPosition = bestsellersElement.offsetTop - 100; // 100px offset from top
 
-      // Only scroll if we're not already at the target
-      if (Math.abs(currentPosition - targetPosition) > 5) {
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
-    }
+    //   // Only scroll if we're not already at the target
+    //   if (Math.abs(currentPosition - targetPosition) > 5) {
+    //     window.scrollTo({
+    //       top: targetPosition,
+    //       behavior: 'smooth'
+    //     });
+    //   }
+    // }
+    window.location.href = '/Menu';
+  };
+  const handleContact = () => {
+    window.location.href = '/contact';
   };
 
   return (
@@ -43,27 +48,21 @@ const Home = () => {
               <Link
                 to="#bestsellers"
                 onClick={handleScroll}
-                className="px-8 py-3 bg-amber-600 text-white font-medium rounded-md hover:bg-amber-700 transition-colors"
-              >
+                className="px-8 py-3 bg-white text-amber-700 font-medium rounded-md hover:bg-amber-50 transition-colors"
+                >
                 View Menu
               </Link>
               <Link
-                to="/order"
-                className="px-8 py-3 border-2 border-amber-600 text-amber-700 font-medium rounded-md hover:bg-amber-50 transition-colors"
-              >
-                Order Now
-              </Link>
-              <Link
                 to="/contact"
-                className="px-8 py-3 text-amber-700 font-medium hover:text-amber-800 transition-colors"
-              >
-                Contact Us
+                className="px-8 py-3 border-2 border-amber-600 text-amber-700 font-medium rounded-md hover:bg-amber-50 transition-colors"
+                >
+                Order Now
               </Link>
             </div>
           </div>
         </div>
       </div>
-
+            <SliderSweet/>
       {/* About Section */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,23 +128,29 @@ const Home = () => {
               {
                 icon: '🍬',
                 title: 'Sweets (Mithai)',
-                items: 'Laddus, Barfi, Rasgullas, Gulab Jamun, Kaju Katli, and seasonal specialties'
+                items: 'Laddus, Barfi, Rasgullas, Gulab Jamun, Kaju Katli, and seasonal specialties',
+                onclick: () => window.location.href = '/Menu'
               },
               {
                 icon: '🌮',
                 title: 'Chaat & Street Food',
-                items: 'Golgappe, Dahi Puri, Aloo Tikki, Papdi Chaat, and more'
+                items: 'Golgappe, Dahi Puri, Aloo Tikki, Papdi Chaat, and more',
+                onclick: () => window.location.href = '/Menu'
               },
               {
                 icon: '🎉',
                 title: 'Catering Services',
-                items: 'Customized menus for weddings, birthdays, and corporate events'
+                items: 'Customized menus for weddings, birthdays, and corporate events',
+                onclick: () => window.location.href = '/Catering'
               }
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold text-amber-800 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.items}</p>
+               <button onClick={item.onclick} className="mt-4 px-6 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors">
+                  View More
+                </button>
               </div>
             ))}
           </div>
@@ -157,7 +162,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Bestsellers id='bestsellers' />
+      <Bestsellers />
 
       {/* Why Choose Us Section */}
       <div className="py-16 bg-white">

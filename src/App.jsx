@@ -5,6 +5,7 @@ import Home from './components/home.jsx'
 import About from './components/about.jsx'
 import Contact from './components/contact.jsx'
 import Catering from './components/catering.jsx'
+import Bestsellers from './components/Bestsellers.jsx'
 function App() {
   return (
     <Routes>
@@ -14,6 +15,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path='catering' element={<Catering/>}/>
+      <Route path="Menu" element={<Bestsellers/>}/>
       </Route>
       <Route path="*" element={<NoMatch />} />
     </Routes>
