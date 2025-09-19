@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo, memo } from 'react';
 import PropTypes from 'prop-types';
 import { FaChevronLeft, FaChevronRight, FaShoppingCart, FaStar, FaSpinner } from 'react-icons/fa';
-import { href } from 'react-router-dom';
+import { href, Link } from 'react-router-dom';
 
 // Custom hook for slider logic
 const useSlider = (items, visibleItems) => {
@@ -186,9 +186,12 @@ const ProductCard = memo(({ item }) => {
                 </span>
               )}
             </div>
-            <Link
-              to="/contact"
+            <Link 
               className="flex items-center rounded-full bg-amber-600 px-4 py-2 text-sm text-white hover:bg-amber-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              aria-label={`Add ${item.name} to cart`}
+              onClick={()=>{
+                window.location.href='https://www.zomato.com/dehradun/maheshwari-sweet-shop-karanpur'
+              }}
             >
               <FaShoppingCart className="mr-2" />
               Order Now
