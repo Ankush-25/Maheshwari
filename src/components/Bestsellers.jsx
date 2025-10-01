@@ -7,8 +7,6 @@ const ITEMS = [
   {
     id: 1,
     name: 'Samosa',
-    price: 20,
-    unit: 'piece',
     rating: 4.7,
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Samosa-and-Chatni.jpg/1024px-Samosa-and-Chatni.jpg',
     description: 'Crispy pastry filled with spiced potatoes and peas',
@@ -84,8 +82,6 @@ const ITEMS = [
   {
     id: 8,
     name: 'Gulab Jamun',
-    price: 20,
-    unit: 'piece',
     rating: 4.7,
     image: 'https://www.foodie-trail.com/wp-content/uploads/2020/04/PHOTO-2022-02-12-20-04-41_1.jpg',
     description: 'Deep-fried milk-solid dumplings soaked in sugar syrup',
@@ -139,8 +135,6 @@ const ITEMS = [
   {
     id: 13,
     name: 'Besan Ladoo',
-    price: 20,
-    unit: 'piece',
     rating: 4.6,
     image: 'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/e4fdf3cc-b0ff-590f-920b-633db90c9c3c/19224aba-9d47-5c9d-b28b-9cf9a1d53f5f.jpg',
     description: 'Gram flour balls roasted in ghee and sweetened',
@@ -183,8 +177,6 @@ const ITEMS = [
   {
     id: 17,
     name: 'Soan Papdi',
-    price: 20,
-    unit: 'piece',
     rating: 4.5,
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Son_papadi.jpg/500px-Son_papadi.jpg',
     description: 'Flaky, melt-in-mouth sweet made of gram flour and sugar',
@@ -194,8 +186,6 @@ const ITEMS = [
   {
     id: 18,
     name: 'Imarti',
-    price: 20,
-    unit: 'piece',
     rating: 4.7,
     image: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/JalebiIndia.jpg',
     description: 'Orange-colored sweet similar to jalebi, made from urad dal',
@@ -260,8 +250,6 @@ const ITEMS = [
   {
     id: 24,
     name: 'Balushahi',
-    price: 20,
-    unit: 'piece',
     rating: 4.6,
     image: 'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/d38ca19c-4de7-525b-b495-14e572ed1bd9/3eeab639-42b7-52c1-b4c7-1dd80947ed07.jpg',
     description: 'Deep-fried flour sweet soaked in sugar syrup',
@@ -282,8 +270,6 @@ const ITEMS = [
   {
     id: 26,
     name: 'Chhena Murki',
-    price: 20,
-    unit: 'piece',
     rating: 4.5,
     image: 'https://cdn.uengage.io/uploads/28289/image-452DX4-1723034325.jpeg',
     description: 'Cottage cheese cubes coated in sugar syrup',
@@ -326,8 +312,6 @@ const ITEMS = [
   {
     id: 30,
     name: 'Gajak (Seasonal)',
-    price: 20,
-    unit: 'piece',
     rating: 4.6,
     image: 'https://vaya.in/recipes/wp-content/uploads/2018/03/Peanut-Sesame-Gajak.jpg',
     description: 'Winter-special sweet made of sesame and jaggery',
@@ -348,20 +332,10 @@ const ITEMS = [
 ];
 
 
-// Price ranges for filtering
-const PRICE_RANGES = [
-  { label: 'Under ₹100', value: 100 },
-  { label: 'Under ₹300', value: 300 },
-  { label: 'Under ₹500', value: 500 },
-  { label: 'Under ₹1000', value: 1000 },
-  { label: 'All Prices', value: 10000 }
-];
 
 // Sort options
 const SORT_OPTIONS = [
   { label: 'Rating', value: 'rating' },
-  { label: 'Price: Low to High', value: 'price-asc' },
-  { label: 'Price: High to Low', value: 'price-desc' },
   { label: 'Name', value: 'name' }
 ];
 
@@ -370,7 +344,7 @@ const CATEGORIES = ['All', ...new Set(ITEMS.map(item => item.category))];
 
 const Bestsellers = ({ id }) => {
   // State management
-  const [priceRange, setPriceRange] = useState(1000);
+  const [priceRange, setPriceRange] = useState(10000);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
   const [sortBy, setSortBy] = useState('rating');
@@ -389,7 +363,7 @@ const Bestsellers = ({ id }) => {
       const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            item.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = activeCategory === 'All' || item.category === activeCategory;
-      const matchesPrice = item.price <= priceRange;
+      const matchesPrice = true;
       
       return matchesSearch && matchesCategory && matchesPrice;
     });
@@ -398,12 +372,6 @@ const Bestsellers = ({ id }) => {
     switch (sortBy) {
       case 'rating':
         result.sort((a, b) => b.rating - a.rating);
-        break;
-      case 'price-asc':
-        result.sort((a, b) => a.price - b.price);
-        break;
-      case 'price-desc':
-        result.sort((a, b) => b.price - a.price);
         break;
       case 'name':
         result.sort((a, b) => a.name.localeCompare(b.name));
@@ -515,40 +483,6 @@ const Bestsellers = ({ id }) => {
             </div>
           </div>
 
-          {/* Price Filter */}
-          <div className="w-full md:w-1/3">
-            <h3 className="text-sm font-medium text-gray-700 mb-2">Price Range</h3>
-            <div className="flex flex-col gap-2">
-              <input
-                type="range"
-                min="0"
-                max="1000"
-                step="50"
-                value={priceRange}
-                onChange={(e) => setPriceRange(Number(e.target.value))}
-                className="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer"
-              />
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-600">₹0</span>
-                <span className="text-sm font-medium text-amber-700">Up to ₹{priceRange}</span>
-                <span className="text-sm text-gray-600">₹1000+</span>
-              </div>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {PRICE_RANGES.map((range) => (
-                  <button
-                    key={range.value}
-                    onClick={() => setPriceRange(range.value)}
-                    className={`px-3 py-1 rounded-full text-xs ${priceRange === range.value
-                      ? 'bg-amber-600 text-white'
-                      : 'bg-white text-gray-700 border border-gray-300'
-                    }`}
-                  >
-                    {range.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Results Count */}
@@ -607,10 +541,6 @@ const Bestsellers = ({ id }) => {
                     {renderStars(item.rating)}
                   </div>
                   <div className="mt-auto flex justify-between items-center">
-                    <span className="text-xl font-bold text-amber-700 flex items-center">
-                      <FaRupeeSign className="inline mr-1" size={14} />
-                      {item.price}/{item.unit}
-                    </span>
                     <Link
                       to="https://www.zomato.com/dehradun/maheshwari-sweet-shop-karanpur"
                       target="_blank"

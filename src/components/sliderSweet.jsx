@@ -176,16 +176,7 @@ const ProductCard = memo(({ item }) => {
           </div>
           <p className="text-sm text-gray-600 mb-4">{item.description}</p>
           <div className="flex items-center justify-between">
-            <div>
-              <span className="text-xl font-bold text-amber-700">
-                ₹{item.price}/{item.unit}
-              </span>
-              {item.discount && (
-                <span className="ml-2 text-sm text-gray-500 line-through">
-                  ₹{Math.round((item.price * 100) / (100 - item.discount))}/{item.unit}
-                </span>
-              )}
-            </div>
+            <div></div>
             <Link 
               className="flex items-center rounded-full bg-amber-600 px-4 py-2 text-sm text-white hover:bg-amber-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
               aria-label={`Add ${item.name} to cart`}
@@ -296,7 +287,6 @@ const sliderItems = [
     image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Koderma_Kalakand.jpg',
     description: 'Rich and creamy milk-based sweet garnished with nuts',
     rating: 4.8,
-    discount: 10,
   },
   {
     id: 2,
@@ -311,8 +301,6 @@ const sliderItems = [
   {
     id: 3,
     name: 'Gulab Jamun',
-    price: 20,
-    unit: 'piece',
     image: 'https://www.foodie-trail.com/wp-content/uploads/2020/04/PHOTO-2022-02-12-20-04-41_1.jpg',
     description: 'Deep-fried milk-solid dumplings soaked in sugar syrup',
     rating: 4.7,
@@ -330,8 +318,6 @@ const sliderItems = [
   {
     id: 5,
     name: 'Samosa',
-    price: 20,
-    unit: 'piece',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Samosa-and-Chatni.jpg/1024px-Samosa-and-Chatni.jpg',
     description: 'Crispy pastry filled with spiced potatoes and peas',
     rating: 4.7,
@@ -354,7 +340,6 @@ const sliderItems = [
     image: 'https://www.tamarindnthyme.com/wp-content/uploads/2020/11/Instant-Jalebi4.jpg',
     description: 'Crispy deep-fried spirals soaked in sugar syrup',
     rating: 4.8,
-    discount: 10,
   },
 ];
 
