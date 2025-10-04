@@ -61,7 +61,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
-          <p>© {new Date().getFullYear()} Maheshwari. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Maheshwari. All rights reserved.<span> Developed by <a className='text-gray-700' href="https://portfolio-green-ten-82.vercel.app/">Ankit Bhandari</a></span></p>
         </div>
       </div>
     </footer>
