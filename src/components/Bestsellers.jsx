@@ -225,17 +225,17 @@ const ITEMS = [
     category: 'Mithai',
     bestseller: true
   },
-  {
-    id: 22,
-    name: 'Kheer',
-    price: 50,
-    unit: 'bowl',
-    rating: 4.8,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/46/Kheer.jpg',
-    description: 'Traditional rice pudding cooked with milk and sugar',
-    category: 'Mithai',
-    bestseller: true
-  },
+  // {
+  //   id: 22,
+  //   name: 'Kheer',
+  //   price: 50,
+  //   unit: 'bowl',
+  //   rating: 4.8,
+  //   image: 'https://upload.wikimedia.org/wikipedia/commons/4/46/Kheer.jpg',
+  //   description: 'Traditional rice pudding cooked with milk and sugar',
+  //   category: 'Mithai',
+  //   bestseller: true
+  // },
   {
     id: 23,
     name: 'Mathura Peda',
@@ -256,17 +256,17 @@ const ITEMS = [
     category: 'Mithai',
     bestseller: true
   },
-  {
-    id: 25,
-    name: 'Malpua',
-    price: 40,
-    unit: 'piece',
-    rating: 4.7,
-    image: 'https://cdn.indiaphile.info/wp-content/uploads/2023/08/stp-malpua-4458.jpg?width=1200&crop_gravity=center&aspect_ratio=2:3&q=75',
-    description: 'Sweet pancakes soaked in sugar syrup, often with rabri',
-    category: 'Mithai',
-    bestseller: true
-  },
+  // {
+  //   id: 25,
+  //   name: 'Malpua',
+  //   price: 40,
+  //   unit: 'piece',
+  //   rating: 4.7,
+  //   image: 'https://cdn.indiaphile.info/wp-content/uploads/2023/08/stp-malpua-4458.jpg?width=1200&crop_gravity=center&aspect_ratio=2:3&q=75',
+  //   description: 'Sweet pancakes soaked in sugar syrup, often with rabri',
+  //   category: 'Mithai',
+  //   bestseller: true
+  // },
   {
     id: 26,
     name: 'Chhena Murki',
