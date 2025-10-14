@@ -9,6 +9,7 @@ const About = () => {
           <h1 className="text-4xl font-bold text-amber-900 sm:text-5xl md:text-6xl">
             Our <span className="text-amber-600">Sweet Legacy</span>
           </h1>
+          <h2>Founder - Late Shri. MunshiRam - 1940</h2>
           <p className="mt-6 text-xl text-amber-800 max-w-3xl mx-auto">
             Traditional recipes, timeless taste — trusted for over 80 years in Dehradun.
           </p>

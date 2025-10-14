@@ -9,6 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Maheshwari</h3>
+            <h2>Founder - Late Shri. MunshiRam - 1940</h2>
             <p >
             Traditional recipes, timeless taste — trusted for over 80 years in Dehradun.
             </p>
