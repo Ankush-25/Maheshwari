@@ -25,7 +25,7 @@ const About = () => {
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Humble Beginnings</h2>
             <p className="text-gray-600 mb-4">
-              Founded in 1940 by the late Subhash Singh Maheshwari, our sweet shop began as a small family business at Karanpur Chowk. What started as a modest outlet has grown into one of Dehradun's most beloved destinations for authentic Indian sweets and snacks.
+              Founded in 1940 by the the late shri Munshi Ram, our sweet shop began as a small family business at Karanpur Chowk. What started as a modest outlet has grown into one of Dehradun's most beloved destinations for authentic Indian sweets and snacks.
             </p>
             <p className="text-gray-600">
               For over eight decades, we've been dedicated to preserving the traditional recipes and techniques that have made our sweets legendary in the region.

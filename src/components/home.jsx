@@ -117,7 +117,7 @@ const Home = () => {
           <div className="lg:text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-8">Our Sweet Legacy</h2>
             <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
-              Founded in 1940 by the late Subhash Singh Maheshwari, our sweet shop has been serving authentic sweets and snacks in Dehradun for over eight decades.
+              Founded in 1940 by the late shri Munshi Ram, our sweet shop has been serving authentic sweets and snacks in Dehradun for over eight decades.
             </p>
           </div>
 
