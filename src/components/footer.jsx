@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -32,37 +32,30 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li>Email: prashantmaheshwari2705@gmail.com</li>
               <li>Phone: +91 9897225756</li>
-              <li>Address: 8, Chowk, Irigation Colony, Karanpur, Dehradun, Uttarakhand 248001</li>
+              <li>Address: 8, Karanpur Chowk, Karanpur, Dehradun, Uttarakhand 248001</li>
             </ul>
           </div>
 
           {/* Social Media */}
           <div>
-            <h4 className="text-lg font-medium mb-4">Follow Us</h4>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
-                <span className="sr-only">Facebook</span>
-                <i className="fab fa-facebook text-xl"></i>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <span className="sr-only">Twitter</span>
-                <i className="fab fa-twitter text-xl"></i>
-              </a>
-              <a href="#" className="hover:text-darkbrown">
-                <span className="sr-only">LinkedIn</span>
-                <i className="fab fa-linkedin text-xl"></i>
-              </a>
-              <a href="#" className="hover:text-darkbrown">
-                <span className="sr-only">Instagram</span>
-                <i className="fab fa-instagram text-xl"></i>
-              </a>
+            <h4 className="text-lg font-medium mb-4">Reach Us</h4>
+            <div className="w-full max-w-md">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-sm cursor-pointer">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  src="./map.jpeg"
+                  alt="Maheshwari location map"
+                  loading="lazy"
+                  onClick={() => window.open("https://share.google/FYjvLZheETad2muC9", "_blank", "noopener,noreferrer")}
+                />
+              </div>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
-          <p>© {new Date().getFullYear()} Maheshwari. All rights reserved.<span> Developed by <a className='text-gray-700' href="https://portfolio-green-ten-82.vercel.app/">Ankit Bhandari</a></span></p>
+          <p>© {new Date().getFullYear()} Maheshwari. All rights reserved.</p>
         </div>
       </div>
     </footer>
