@@ -46,7 +46,7 @@ const Footer = () => {
                   src="./map.jpeg"
                   alt="Maheshwari location map"
                   loading="lazy"
-                  onClick={() => window.open("https://share.google/FYjvLZheETad2muC9", "_blank", "noopener,noreferrer")}
+                  onClick={() => window.open("https://www.google.com/maps/place/Maheshwari+Sweet+Shop/@30.3284265,78.0547738,17z/data=!4m10!1m2!2m1!1sMaheshwari+Sweet+Shop+Dehradun!3m6!1s0x3909299e7e8c2737:0x590881297182bbfa!8m2!3d30.3283696!4d78.0572106!15sCh5NYWhlc2h3YXJpIFN3ZWV0IFNob3AgRGVocmFkdW6SARJpbmRpYW5fc3dlZXRzX3Nob3CqAXEKDS9nLzExeWs4OXAzZG4QASoZIhVtYWhlc2h3YXJpIHN3ZWV0IHNob3AoADIfEAEiG8xKpqgxird6kyAQ7u2AYfO2n11F8HZz9oeI4TIiEAIiHm1haGVzaHdhcmkgc3dlZXQgc2hvcCBkZWhyYWR1buABAA!16s%2Fg%2F11yk89p3dn?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D", "_blank", "noopener,noreferrer")}
                 />
               </div>
             </div>
